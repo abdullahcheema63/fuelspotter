@@ -176,8 +176,10 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Spotter fuel-route API',
-    'DESCRIPTION': 'Driving route between two places in the USA with cost-optimal fuel stops.',
+    'TITLE': 'FuelSpotter API',
+    'DESCRIPTION': ('The driving route between two places in the USA, the fuel stops that keep fuel '
+                    'cost down without stopping more often than it is worth, and the total spent on '
+                    'fuel. 500-mile range, 10 mpg. Authorize with: Api-Key <your key>.'),
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
