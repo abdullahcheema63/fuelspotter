@@ -5,3 +5,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# research: big downloads (only needed to rebuild intermediate files) and saved API answers
+research/geocoding/downloads/*
+!research/geocoding/downloads/README.md
+research/prototype/cache/

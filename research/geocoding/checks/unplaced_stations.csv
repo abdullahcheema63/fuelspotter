@@ -1,0 +1,158 @@
+id,name,address,city,state,relevant,search_link
+85,DOWNIEVILLE FUEL STOP,"I-70, EXIT 234",Dumont,CO,True,https://www.google.com/maps/search/?api=1&query=DOWNIEVILLE+FUEL+STOP+Dumont+CO
+341,TA JACKSONVILLE SOUTH TRAVEL CENTER,"I-95, EXIT 329",Saint Johns,FL,True,https://www.google.com/maps/search/?api=1&query=TA+JACKSONVILLE+SOUTH+TRAVEL+CENTER+Saint+Johns+FL
+368,WILTON TRAVEL PLAZA,"I-87, EXIT 16",Gansevoort,NY,True,https://www.google.com/maps/search/?api=1&query=WILTON+TRAVEL+PLAZA+Gansevoort+NY
+455,MR FUEL #753,"I-95, EXIT 104 & SR-207",Ruther Glen,VA,True,https://www.google.com/maps/search/?api=1&query=MR+FUEL+%23753+Ruther+Glen+VA
+491,One9 #403,"I-75, EXIT 117",Heiskell,TN,True,https://www.google.com/maps/search/?api=1&query=One9+%23403+Heiskell+TN
+1414,SAC SHOP #507,"I-70, EXIT 12/161",Breezewood,PA,True,https://www.google.com/maps/search/?api=1&query=SAC+SHOP+%23507+Breezewood+PA
+1560,CATTREZ,US-20 & SR-5,Irving,NY,True,https://www.google.com/maps/search/?api=1&query=CATTREZ+Irving+NY
+2022,GO MART FOOD STORE #86,"I-79, EXIT 40 & SR-16",Ivydale,WV,True,https://www.google.com/maps/search/?api=1&query=GO+MART+FOOD+STORE+%2386+Ivydale+WV
+2192,GO MART FOOD STORE #51,US-19/SR-129,Mount Nebo,WV,True,https://www.google.com/maps/search/?api=1&query=GO+MART+FOOD+STORE+%2351+Mount+Nebo+WV
+2982,CIRCLE K #2723726,"I-59/I-20, EXIT 52 & US-11/US-43/SR-7",Knoxville,AL,True,https://www.google.com/maps/search/?api=1&query=CIRCLE+K+%232723726+Knoxville+AL
+3464,BOISE PETROLEUM LLC,"I-84,  EXIT 71",Boise,ID,True,https://www.google.com/maps/search/?api=1&query=BOISE+PETROLEUM+LLC+Boise+ID
+3702,BEARS DEN TRADING POST #101,ST 37 11 MI E OF MASSENA,Hogansburg,NY,False,https://www.google.com/maps/search/?api=1&query=BEARS+DEN+TRADING+POST+%23101+Hogansburg+NY
+3737,JORDAN'S KWIK STOP #70,US-49,West Helena,AR,True,https://www.google.com/maps/search/?api=1&query=JORDAN%27S+KWIK+STOP+%2370+West+Helena+AR
+4101,E-Z MART #4411,HIGHWAY 69 & COBBLESTONE DR,Pryor,OK,False,https://www.google.com/maps/search/?api=1&query=E-Z+MART+%234411+Pryor+OK
+4211,FLYING J #513,"I-15, EXIT 1",Jean,NV,True,https://www.google.com/maps/search/?api=1&query=FLYING+J+%23513+Jean+NV
+4311,Saveway Truck Plaza,"I-65, EXIT 164 & US-31",Hope Hull,AL,True,https://www.google.com/maps/search/?api=1&query=Saveway+Truck+Plaza+Hope+Hull+AL
+4368,HOODS SERVICE CENTER,"I-44, EXIT 61",Bois D Arc,MO,True,https://www.google.com/maps/search/?api=1&query=HOODS+SERVICE+CENTER+Bois+D+Arc+MO
+4482,FLYING J TRAVEL PLAZA #777,"I-84, EXIT 54(FEDERAL WAY)",Boise,ID,True,https://www.google.com/maps/search/?api=1&query=FLYING+J+TRAVEL+PLAZA+%23777+Boise+ID
+5163,Blue Sky #733,"US-78, EXIT 81 & SR-178",Belden,MS,True,https://www.google.com/maps/search/?api=1&query=Blue+Sky+%23733+Belden+MS
+5170,FLYING J #516,"I-76, EXIT 161 & I-70",Breezewood,PA,True,https://www.google.com/maps/search/?api=1&query=FLYING+J+%23516+Breezewood+PA
+5771,DUNES AUTO TRUCK PLAZA,"I-94, EXIT 12",Sawyer,MI,True,https://www.google.com/maps/search/?api=1&query=DUNES+AUTO+TRUCK+PLAZA+Sawyer+MI
+5780,BILLS TRUCKSTOP,"I-85, EXIT 86",Linwood,NC,True,https://www.google.com/maps/search/?api=1&query=BILLS+TRUCKSTOP+Linwood+NC
+6215,FUEL HUB,"I-87, EXIT 21B",West Coxsackie,NY,True,https://www.google.com/maps/search/?api=1&query=FUEL+HUB+West+Coxsackie+NY
+6334,231 PLAZA AND TRUCK STOP,US-231/SR-75 & SR-20,Youngstown,FL,True,https://www.google.com/maps/search/?api=1&query=231+PLAZA+AND+TRUCK+STOP+Youngstown+FL
+6607,TRANSIT TRUCK STOP,"I-97, EXIT 10",Millersville,MD,True,https://www.google.com/maps/search/?api=1&query=TRANSIT+TRUCK+STOP+Millersville+MD
+7131,TA BREEZEWOOD TRAVEL CENTER,"I-76 & US30, EXIT 161",Breezewood,PA,True,https://www.google.com/maps/search/?api=1&query=TA+BREEZEWOOD+TRAVEL+CENTER+Breezewood+PA
+7132,Terrible Herbst dba/One9 #1395,"I-15, EXIT 12",Jean,NV,True,https://www.google.com/maps/search/?api=1&query=Terrible+Herbst+dba%2FOne9+%231395+Jean+NV
+7213,SENECA ONE STOP,"I-90, EXIT 58",Irving,NY,True,https://www.google.com/maps/search/?api=1&query=SENECA+ONE+STOP+Irving+NY
+7220,CUMBERLAND FARMS #001662,US-9W/SR-32,Glenmont,NY,True,https://www.google.com/maps/search/?api=1&query=CUMBERLAND+FARMS+%23001662+Glenmont+NY
+7417,SKY CITGO,US-30 & SR-23,Grovertown,IN,True,https://www.google.com/maps/search/?api=1&query=SKY+CITGO+Grovertown+IN
+9280,ONVO TRAVEL PLAZA - LAKEWOOD,"I-84, EXIT 20 & SR-507",Greentown,PA,True,https://www.google.com/maps/search/?api=1&query=ONVO+TRAVEL+PLAZA+-+LAKEWOOD+Greentown+PA
+9528,GO MART FOOD STORE #43,"I-64, EXIT 39 & SR-34",Teays,WV,True,https://www.google.com/maps/search/?api=1&query=GO+MART+FOOD+STORE+%2343+Teays+WV
+10014,Sudden Service #6604,"I-40, EXIT 212",Nashville,TN,True,https://www.google.com/maps/search/?api=1&query=Sudden+Service+%236604+Nashville+TN
+10101,PILOT TRAVEL CENTERS #65,"I-20, EXIT 194",Augusta,GA,True,https://www.google.com/maps/search/?api=1&query=PILOT+TRAVEL+CENTERS+%2365+Augusta+GA
+20070,ONVO TRAVEL PLAZA - PROMISED LAND,"I-84, EXIT 26 & SR-390",Tafton,PA,True,https://www.google.com/maps/search/?api=1&query=ONVO+TRAVEL+PLAZA+-+PROMISED+LAND+Tafton+PA
+52367,DOSWELL TRUCK STOP,"I-95, EXIT 98 & SR-30",Doswell,VA,True,https://www.google.com/maps/search/?api=1&query=DOSWELL+TRUCK+STOP+Doswell+VA
+52667,EXPRESS LANE TRAVEL CENTER,"I-20, EXIT 100 & US-80",Lawrence,MS,True,https://www.google.com/maps/search/?api=1&query=EXPRESS+LANE+TRAVEL+CENTER+Lawrence+MS
+60250,ELIZABETH TRUCK STOP,"I-95, EXIT 13A & SR-81",Elizabethport,NJ,True,https://www.google.com/maps/search/?api=1&query=ELIZABETH+TRUCK+STOP+Elizabethport+NJ
+60791,MARATHON #9,"I-475, EXIT 1",Macon,GA,True,https://www.google.com/maps/search/?api=1&query=MARATHON+%239+Macon+GA
+60839,FREEDOM OIL #18,"I-74, EXIT 82",Edwards,IL,True,https://www.google.com/maps/search/?api=1&query=FREEDOM+OIL+%2318+Edwards+IL
+61021,WESTOVER GOOSE CREEK,US-13 & SR-673,Westover,MD,True,https://www.google.com/maps/search/?api=1&query=WESTOVER+GOOSE+CREEK+Westover+MD
+61291,FLEMING OIL FOOD MART,ST 9,West Chesterfield,NH,False,https://www.google.com/maps/search/?api=1&query=FLEMING+OIL+FOOD+MART+West+Chesterfield+NH
+61806,LANKFORD TRUCK PLAZA,US-13 & CR-646,Townsend,VA,True,https://www.google.com/maps/search/?api=1&query=LANKFORD+TRUCK+PLAZA+Townsend+VA
+62550,Sunoco,"I-275, EXIT 11",New Boston,MI,True,https://www.google.com/maps/search/?api=1&query=Sunoco+New+Boston+MI
+62559,EXPRESS FOOD DEPOT,"I-94, EXIT 266",Smiths Creek,MI,True,https://www.google.com/maps/search/?api=1&query=EXPRESS+FOOD+DEPOT+Smiths+Creek+MI
+62850,GANSEVOORT MINI MART,"I-87, EXIT 17",Gansevoort,NY,True,https://www.google.com/maps/search/?api=1&query=GANSEVOORT+MINI+MART+Gansevoort+NY
+62991,ONVO TRAVEL PLAZA,"I-84, EXIT 17",Lake Ariel,PA,True,https://www.google.com/maps/search/?api=1&query=ONVO+TRAVEL+PLAZA+Lake+Ariel+PA
+63754,U SAVE TRAVEL PLAZA,US-19 & SR-129,Mount Nebo,WV,True,https://www.google.com/maps/search/?api=1&query=U+SAVE+TRAVEL+PLAZA+Mount+Nebo+WV
+63910,OGMULGEE CHEVRON #419,"I-16, EXIT 6",Macon,GA,True,https://www.google.com/maps/search/?api=1&query=OGMULGEE+CHEVRON+%23419+Macon+GA
+63915,HIGHWAY 80 CHEVRON,"I-185, EXIT 7",Midland,GA,True,https://www.google.com/maps/search/?api=1&query=HIGHWAY+80+CHEVRON+Midland+GA
+64021,CM AMITE,SR-16,Amite,LA,False,https://www.google.com/maps/search/?api=1&query=CM+AMITE+Amite+LA
+64063,Mobil,US-20 & SR-56,North Oxford,MA,True,https://www.google.com/maps/search/?api=1&query=Mobil+North+Oxford+MA
+64083,BIG DADDYS TRUCKSTOP,US-223 & US-23,Ottawa Lake,MI,True,https://www.google.com/maps/search/?api=1&query=BIG+DADDYS+TRUCKSTOP+Ottawa+Lake+MI
+64274,RUTTERS #53,"I-83, EXIT 32 & SR-382",Etters,PA,True,https://www.google.com/maps/search/?api=1&query=RUTTERS+%2353+Etters+PA
+64301,HILLVIEW TRUCK STOP,"I-20, EXIT 39",Leesville,SC,True,https://www.google.com/maps/search/?api=1&query=HILLVIEW+TRUCK+STOP+Leesville+SC
+64406,Main Street Market,SR-84 & FM-73,Prairie Hill,TX,False,https://www.google.com/maps/search/?api=1&query=Main+Street+Market+Prairie+Hill+TX
+64523,SKY CITY TRAVEL CENTER,"I-40, EXIT 102 NORTH",Pueblo Of Acoma,NM,True,https://www.google.com/maps/search/?api=1&query=SKY+CITY+TRAVEL+CENTER+Pueblo+Of+Acoma+NM
+64554,FACKLER TEXACO TRUCK STOP,US-72 & CR-42,Fackler,AL,True,https://www.google.com/maps/search/?api=1&query=FACKLER+TEXACO+TRUCK+STOP+Fackler+AL
+64825,EXIT 10 AUTO AND TRUCK STOP,"I-185/SR-411, EXIT 19 & SR-315",Fortson,GA,True,https://www.google.com/maps/search/?api=1&query=EXIT+10+AUTO+AND+TRUCK+STOP+Fortson+GA
+64980,DOUBLE KWIK MARKET #1044,SR-15/SR-7/SR-160,Isom,KY,False,https://www.google.com/maps/search/?api=1&query=DOUBLE+KWIK+MARKET+%231044+Isom+KY
+65067,SUNOCO,US-301,Newburg,MD,True,https://www.google.com/maps/search/?api=1&query=SUNOCO+Newburg+MD
+65178,WILD BILLS TRAVEL CENTER,US-65 & SR-14,Ridgedale,MO,True,https://www.google.com/maps/search/?api=1&query=WILD+BILLS+TRAVEL+CENTER+Ridgedale+MO
+65377,PETROL 9 W,US-9W,Glenmont,NY,True,https://www.google.com/maps/search/?api=1&query=PETROL+9+W+Glenmont+NY
+65379,MIRABITO #74,"SR-79 N/I-88E, EXIT 6",Harpursville,NY,True,https://www.google.com/maps/search/?api=1&query=MIRABITO+%2374+Harpursville+NY
+65381,NATIVE PRIDE,"I-90, EXIT 58 & US-20",Irving,NY,True,https://www.google.com/maps/search/?api=1&query=NATIVE+PRIDE+Irving+NY
+65552,A PLUS MINI MARKET,US-1 & SR-132,Feasterville Trevose,PA,True,https://www.google.com/maps/search/?api=1&query=A+PLUS+MINI+MARKET+Feasterville+Trevose+PA
+65759,XPRESS STOP,US-522 & SR-694,Cross Junction,VA,True,https://www.google.com/maps/search/?api=1&query=XPRESS+STOP+Cross+Junction+VA
+65989,DANCING EAGLE,"I-40, EXIT 108",Casa Blanca,NM,True,https://www.google.com/maps/search/?api=1&query=DANCING+EAGLE+Casa+Blanca+NM
+66068,HOLIDAY STATIONSTORE #2746262,I-175 EXIT 394,Sault Sainte Marie,MI,True,https://www.google.com/maps/search/?api=1&query=HOLIDAY+STATIONSTORE+%232746262+Sault+Sainte+Marie+MI
+66069,128 NEWTON GAS,"I-95, EXIT 20A/SR-128 & SR-9",Newton Lower Falls,MA,True,https://www.google.com/maps/search/?api=1&query=128+NEWTON+GAS+Newton+Lower+Falls+MA
+66078,Amoco,I-40 EXIT 447,Hartford,TN,True,https://www.google.com/maps/search/?api=1&query=Amoco+Hartford+TN
+66182,CIRCLE K #2706708,"I-185, EXIT 10",Midland,GA,True,https://www.google.com/maps/search/?api=1&query=CIRCLE+K+%232706708+Midland+GA
+66307,CM ST HELENA,SR-16,Amite,LA,False,https://www.google.com/maps/search/?api=1&query=CM+ST+HELENA+Amite+LA
+66451,EZ MART #304,M-57,Middleton,MI,False,https://www.google.com/maps/search/?api=1&query=EZ+MART+%23304+Middleton+MI
+66504,COUNTRY BOYS COUNTRY STORE,"I-10, EXIT 813",Hankamer,TX,True,https://www.google.com/maps/search/?api=1&query=COUNTRY+BOYS+COUNTRY+STORE+Hankamer+TX
+66512,MARATHON #1554,"I-75, EXIT 21",Newport,MI,True,https://www.google.com/maps/search/?api=1&query=MARATHON+%231554+Newport+MI
+66517,ADMIRAL PETROLEUM #5796,"I-75, EXIT 392",Sault Sainte Marie,MI,True,https://www.google.com/maps/search/?api=1&query=ADMIRAL+PETROLEUM+%235796+Sault+Sainte+Marie+MI
+66547,OLD STONE JIFFY MART,"I-81, EXIT 321",Clear Brook,VA,True,https://www.google.com/maps/search/?api=1&query=OLD+STONE+JIFFY+MART+Clear+Brook+VA
+66560,Sunoco,"I-85, EXIT 11",Townville,SC,True,https://www.google.com/maps/search/?api=1&query=Sunoco+Townville+SC
+66584,MOAPA PAIUTE TRAVEL CENTER,"I-15, EXIT 75",Moapa,NV,True,https://www.google.com/maps/search/?api=1&query=MOAPA+PAIUTE+TRAVEL+CENTER+Moapa+NV
+66598,WOODSHED LL,I-166 & I-169,S Coffeyville,OK,True,https://www.google.com/maps/search/?api=1&query=WOODSHED+LL+S+Coffeyville+OK
+66734,Marathon,"I-675, Exit 7",Ellenwood,GA,True,https://www.google.com/maps/search/?api=1&query=Marathon+Ellenwood+GA
+66776,S&G #77,US-224 & US-23,Alvada,OH,True,https://www.google.com/maps/search/?api=1&query=S%26G+%2377+Alvada+OH
+66863,101 TRAVEL PLAZA,"I-40, EXIT 101 & SR-104",Cedar Grove,TN,True,https://www.google.com/maps/search/?api=1&query=101+TRAVEL+PLAZA+Cedar+Grove+TN
+66890,CASEYS #4223,US-25E,Middlesboro,KY,True,https://www.google.com/maps/search/?api=1&query=CASEYS+%234223+Middlesboro+KY
+67075,CM FOREST GOLD,SR-16,Amite,LA,False,https://www.google.com/maps/search/?api=1&query=CM+FOREST+GOLD+Amite+LA
+67305,RELAY STATION,"I-20, EXIT 3",Bethany,LA,True,https://www.google.com/maps/search/?api=1&query=RELAY+STATION+Bethany+LA
+67370,CIRCLE M #43,US-441/US-23/SR-15,Rabun Gap,GA,True,https://www.google.com/maps/search/?api=1&query=CIRCLE+M+%2343+Rabun+Gap+GA
+67429,7-ELEVEN #40396,"NJTP, EXIT 8A",Monroe Township,NJ,False,https://www.google.com/maps/search/?api=1&query=7-ELEVEN+%2340396+Monroe+Township+NJ
+67617,Twice Daily Convenience Store #8046,"I-24, EXIT 31 & SR-249",Joelton,TN,True,https://www.google.com/maps/search/?api=1&query=Twice+Daily+Convenience+Store+%238046+Joelton+TN
+67644,PARKERS #31 (DISCOUNT AVAILABLE),US-80/SR-26 & US-280,Ellabell,GA,True,https://www.google.com/maps/search/?api=1&query=PARKERS+%2331+%28DISCOUNT+AVAILABLE%29+Ellabell+GA
+67821,FAS MART #5261,SR-9 & SR-57,Tollesboro,KY,False,https://www.google.com/maps/search/?api=1&query=FAS+MART+%235261+Tollesboro+KY
+67850,SMILEYS FUEL CITY,"I-64/I-81, EXIT 205 & SR-206",Raphine,VA,True,https://www.google.com/maps/search/?api=1&query=SMILEYS+FUEL+CITY+Raphine+VA
+68030,FIVE STAR EXPRESS,"I-520/SR-415, EXIT 16 & SR-28",Augusta,GA,True,https://www.google.com/maps/search/?api=1&query=FIVE+STAR+EXPRESS+Augusta+GA
+68174,MIRABITO #42,"I-81, EXIT 7",Castle Creek,NY,True,https://www.google.com/maps/search/?api=1&query=MIRABITO+%2342+Castle+Creek+NY
+68672,24 NORTH MOBIL,"I-495, EXIT 7A & SR-24, EXIT 14B",Bridgewater,MA,True,https://www.google.com/maps/search/?api=1&query=24+NORTH+MOBIL+Bridgewater+MA
+68873,ONVO TRAVEL PLAZA - MOUNTAIN COBB,"I-84, EXIT 8",Lake Ariel,PA,True,https://www.google.com/maps/search/?api=1&query=ONVO+TRAVEL+PLAZA+-+MOUNTAIN+COBB+Lake+Ariel+PA
+68927,MARATHON,US-19 & SR-80,Rosedale,VA,True,https://www.google.com/maps/search/?api=1&query=MARATHON+Rosedale+VA
+68941,ALLTOWN MARKETS #2743,"US-3, EXIT 28",North Billerica,MA,True,https://www.google.com/maps/search/?api=1&query=ALLTOWN+MARKETS+%232743+North+Billerica+MA
+69007,SPEEDWAY #7136,US-41 & US-70,Nashville,TN,True,https://www.google.com/maps/search/?api=1&query=SPEEDWAY+%237136+Nashville+TN
+69021,SWEET CRUDE TRAVEL CENTER,HWY 85 & SR 200,Grassy Butte,ND,False,https://www.google.com/maps/search/?api=1&query=SWEET+CRUDE+TRAVEL+CENTER+Grassy+Butte+ND
+69127,TALL TIMBERS TRUCK STOP,"I-55, EXIT 46 & SR-16",Amite,LA,True,https://www.google.com/maps/search/?api=1&query=TALL+TIMBERS+TRUCK+STOP+Amite+LA
+69146,DRUMS FUEL STOP,I-80 EXIT 262,Drums,PA,True,https://www.google.com/maps/search/?api=1&query=DRUMS+FUEL+STOP+Drums+PA
+69416,CIRCLE K #2740541,HWY 90,Roans Prairie,TX,False,https://www.google.com/maps/search/?api=1&query=CIRCLE+K+%232740541+Roans+Prairie+TX
+69563,SPEEDWAY #9651,"I-75, EXIT 104",Lexington,KY,True,https://www.google.com/maps/search/?api=1&query=SPEEDWAY+%239651+Lexington+KY
+69666,7-ELEVEN #40587,SR-21 & FM-150,Maxwell,TX,False,https://www.google.com/maps/search/?api=1&query=7-ELEVEN+%2340587+Maxwell+TX
+69672,STRIPES 7FLEET #42507,US-285,Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=STRIPES+7FLEET+%2342507+Pecos+TX
+69944,TRUCK WORLD,"I-76, EXIT 57",North Jackson,OH,True,https://www.google.com/maps/search/?api=1&query=TRUCK+WORLD+North+Jackson+OH
+69947,THORNTONS #607,I-24 EXIT 62 & SR-171,Antioch,TN,True,https://www.google.com/maps/search/?api=1&query=THORNTONS+%23607+Antioch+TN
+70164,ONVO TRAVEL PLAZA - BLAKESLEE,I-80 EXIT 284,Blakeslee,PA,True,https://www.google.com/maps/search/?api=1&query=ONVO+TRAVEL+PLAZA+-+BLAKESLEE+Blakeslee+PA
+70349,WEIGELS #90,SR-139 & SR-66,Kodak,TN,False,https://www.google.com/maps/search/?api=1&query=WEIGELS+%2390+Kodak+TN
+70430,SPRINT FOODS #715,I-520 & SR-56,Augusta,GA,True,https://www.google.com/maps/search/?api=1&query=SPRINT+FOODS+%23715+Augusta+GA
+70447,84 QUIK STOP,"I-84, EXIT 3 & US-6",New Hampton,NY,True,https://www.google.com/maps/search/?api=1&query=84+QUIK+STOP+New+Hampton+NY
+70454,DANDY MINI MART #36,US-220,Monroeton,PA,True,https://www.google.com/maps/search/?api=1&query=DANDY+MINI+MART+%2336+Monroeton+PA
+70463,CIRCLE K #2741496,US-290,Chappell Hill,TX,True,https://www.google.com/maps/search/?api=1&query=CIRCLE+K+%232741496+Chappell+Hill+TX
+70479,CROSSROADS MARKET,US-60 & SR-657,Gladstone,VA,True,https://www.google.com/maps/search/?api=1&query=CROSSROADS+MARKET+Gladstone+VA
+70597,SPEEDWAY #9394,SR-4 & US-25,Lexington,KY,True,https://www.google.com/maps/search/?api=1&query=SPEEDWAY+%239394+Lexington+KY
+70895,QUARLES #4011/SHELL,I-95 EXIT 118,Woodford,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234011%2FSHELL+Woodford+VA
+70912,QUARLES #4411,"I-695 EXIT 1, SR-173",Curtis Bay,MD,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234411+Curtis+Bay+MD
+70916,TA Express White Hills,US-93,Willow Beach,AZ,True,https://www.google.com/maps/search/?api=1&query=TA+Express+White+Hills+Willow+Beach+AZ
+70918,QUARLES #4417,I-895 EXIT 8B,Curtis Bay,MD,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234417+Curtis+Bay+MD
+70966,QUARLES #4927,SR-10 & SR-145,Chesterfield,VA,False,https://www.google.com/maps/search/?api=1&query=QUARLES+%234927+Chesterfield+VA
+70971,QUARLES #4932,"I-64, EXIT 173 & SR-623",Rockville,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234932+Rockville+VA
+70980,QUARLES #4938,"I-64, EXIT 159 & SR-522",Gum Spring,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234938+Gum+Spring+VA
+70982,EXXON/QUARLES #4942,"I-64/33, EXIT 205 & SR-249",Quinton,VA,True,https://www.google.com/maps/search/?api=1&query=EXXON%2FQUARLES+%234942+Quinton+VA
+70983,QUARLES #4943,"I-295, EXIT 22A & SR-5",Henrico,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234943+Henrico+VA
+70996,QUARLES #4912,I-64 EXIT 136,Troy,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234912+Troy+VA
+71004,QUARLES #4924,US-1 & SR-688,Doswell,VA,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%234924+Doswell+VA
+71066,Circle K #2745067,"I-75, EXIT 155",Macon,GA,True,https://www.google.com/maps/search/?api=1&query=Circle+K+%232745067+Macon+GA
+71080,BIG INDIAN SMOKE SHOP,I-90 & US-20,Irving,NY,True,https://www.google.com/maps/search/?api=1&query=BIG+INDIAN+SMOKE+SHOP+Irving+NY
+71083,SPRINT FOOD #701,US-78,Augusta,GA,True,https://www.google.com/maps/search/?api=1&query=SPRINT+FOOD+%23701+Augusta+GA
+71117,AM-PM TRUCK STOP,"I-520/SR-415, EXIT 9 & SR-56",Augusta,GA,True,https://www.google.com/maps/search/?api=1&query=AM-PM+TRUCK+STOP+Augusta+GA
+71164,DANDY MINI MART #59,SR-287,Middlebury Center,PA,False,https://www.google.com/maps/search/?api=1&query=DANDY+MINI+MART+%2359+Middlebury+Center+PA
+71242,LAST STOP TRAVEL CENTER,US-93,Willow Beach,AZ,True,https://www.google.com/maps/search/?api=1&query=LAST+STOP+TRAVEL+CENTER+Willow+Beach+AZ
+71356,ALLSUPS CONVENIENCE STORE #2266,I-20 & US-285,Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=ALLSUPS+CONVENIENCE+STORE+%232266+Pecos+TX
+71369,MR GAS TRAVEL CENTER #21,I-84 EXIT 59A,Boise,ID,True,https://www.google.com/maps/search/?api=1&query=MR+GAS+TRAVEL+CENTER+%2321+Boise+ID
+71470,ALLSUPS CONVENIENCE STORE #2267,"I-20, EXIT 42 & CR-761",Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=ALLSUPS+CONVENIENCE+STORE+%232267+Pecos+TX
+71511,RACETRAC #2592,US HWY 29,Athens,GA,False,https://www.google.com/maps/search/?api=1&query=RACETRAC+%232592+Athens+GA
+71655,79 ONE STOP,SR-62 & SR-37,Saint Croix,IN,False,https://www.google.com/maps/search/?api=1&query=79+ONE+STOP+Saint+Croix+IN
+71822,DK,SR 176,Lenorah,TX,False,https://www.google.com/maps/search/?api=1&query=DK+Lenorah+TX
+71838,RUTTERS #24,SR-74 & SR-2069,Brogue,PA,False,https://www.google.com/maps/search/?api=1&query=RUTTERS+%2324+Brogue+PA
+71995,Chevron,"I-40, EXIT 218 & US-285",Clines Corners,NM,True,https://www.google.com/maps/search/?api=1&query=Chevron+Clines+Corners+NM
+72219,QUICK FILL,US-78/SR-4,Eastaboga,AL,True,https://www.google.com/maps/search/?api=1&query=QUICK+FILL+Eastaboga+AL
+72240,ROYAL FARMS #191,I-83 Exit 20A,Hunt Valley,MD,True,https://www.google.com/maps/search/?api=1&query=ROYAL+FARMS+%23191+Hunt+Valley+MD
+72242,ROYAL FARMS #311,SR-7 & SR-43,Nottingham,MD,False,https://www.google.com/maps/search/?api=1&query=ROYAL+FARMS+%23311+Nottingham+MD
+72285,CUSSETA TRAVEL CENTER,SR 520,Cusseta,GA,False,https://www.google.com/maps/search/?api=1&query=CUSSETA+TRAVEL+CENTER+Cusseta+GA
+72291,Union 76,US-129,Mc Alpin,FL,True,https://www.google.com/maps/search/?api=1&query=Union+76+Mc+Alpin+FL
+72400,HAN DEE HUGOS #21,US-17 & SR-87,Winnabow,NC,True,https://www.google.com/maps/search/?api=1&query=HAN+DEE+HUGOS+%2321+Winnabow+NC
+72550,TERRIBLE HERBST #388,I-15 Exit 91,Moapa,NV,True,https://www.google.com/maps/search/?api=1&query=TERRIBLE+HERBST+%23388+Moapa+NV
+72554,CEFCO #422,SR-4,Baker,FL,False,https://www.google.com/maps/search/?api=1&query=CEFCO+%23422+Baker+FL
+72616,PETRO-CARD 24 #910700,SR-32,Sainte Genevieve,MO,False,https://www.google.com/maps/search/?api=1&query=PETRO-CARD+24+%23910700+Sainte+Genevieve+MO
+72742,Racetrac #2612,I-675 EXIT 7,Ellenwood,GA,True,https://www.google.com/maps/search/?api=1&query=Racetrac+%232612+Ellenwood+GA
+72830,QUARLES #54261,"I-20, EXIT 37",Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%2354261+Pecos+TX
+72844,QUARLES #54332,US-285,Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=QUARLES+%2354332+Pecos+TX
+72987,The Texan,US-285 & CR-116,Pecos,TX,True,https://www.google.com/maps/search/?api=1&query=The+Texan+Pecos+TX
+72993,H AND R OIL COMPANY,"SR-4, EXIT 8",Lexington,KY,False,https://www.google.com/maps/search/?api=1&query=H+AND+R+OIL+COMPANY+Lexington+KY
+73032,Parkers #110,SR 56,Augusta,GA,False,https://www.google.com/maps/search/?api=1&query=Parkers+%23110+Augusta+GA

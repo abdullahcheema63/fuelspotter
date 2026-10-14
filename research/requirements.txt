@@ -1,0 +1,6 @@
+# Only for the research scripts (geocoding pipeline and prototypes); the API does not need these.
+numpy==2.5.4
+pandas==3.0.6
+requests==2.34.2
+# Only to rebuild geocoding/data/exits.csv from OpenStreetMap (also needs the osmium-tool CLI):
+osmium==4.3.1

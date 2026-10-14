@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Fuel route</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>html,body,#map{height:100%;margin:0}</style></head><body><div id="map"></div><script>
+const data = {"line": [[39.73921, -104.98549], [39.73921, -104.98549], [39.739206, -104.985486]], "candidates": [], "stops": [], "start": [39.7392364, -104.984862], "finish": [39.7392364, -104.984862]};
+const map = L.map('map');
+// Esri street basemap (no key needed). OSM's own tile servers refuse pages opened from disk.
+const tiles = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer';
+L.tileLayer(tiles + '/tile/{z}/{y}/{x}', {attribution: 'Tiles © Esri', maxZoom: 19}).addTo(map);
+const line = L.polyline(data.line, {color: '#2563eb', weight: 4}).addTo(map);
+map.fitBounds(line.getBounds());
+data.candidates.forEach(c =>
+  L.circleMarker([c[0], c[1]], {radius: 3, color: '#888', weight: 1}).bindPopup(c[2]).addTo(map));
+data.stops.forEach(s => L.marker([s[0], s[1]]).bindPopup(s[2]).addTo(map));
+const end = (at, colour, label) =>
+  L.circleMarker(at, {radius: 8, color: colour, fillOpacity: 1}).bindPopup(label).addTo(map);
+end(data.start, '#16a34a', 'Start');
+end(data.finish, '#dc2626', 'Finish');
+</script></body></html>
