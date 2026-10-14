@@ -50,6 +50,8 @@ class TripRecord(models.Model):
         FAILED = 'failed', 'Failed'
 
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    # Random id used in the map link, so a trip's map can be opened without an API key.
+    public_id = models.UUIDField(null=True, blank=True, unique=True, editable=False)
     api_key = models.ForeignKey(
         APIKey, null=True, blank=True, on_delete=models.SET_NULL, related_name='trips')
 
@@ -90,6 +92,9 @@ class TripRecord(models.Model):
     # How it went
     external_calls = models.PositiveSmallIntegerField(default=0)
     elapsed_ms = models.FloatField(default=0)
+
+    # What the map page draws: route line, stops and the stations considered, as planned.
+    map_data = models.JSONField(null=True, blank=True)
 
     class Meta:
         ordering = ['-created_at']

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Fuel route</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html, body, #map { height: 100%; margin: 0; }
+  #panel {
+    position: absolute; z-index: 1000; top: 10px; right: 10px; max-width: 320px;
+    background: #fff; padding: 10px 14px; border-radius: 6px; box-shadow: 0 1px 5px rgba(0,0,0,.4);
+    font: 13px/1.45 system-ui, sans-serif;
+  }
+  #panel h1 { font-size: 14px; margin: 0 0 6px; }
+  #panel .warning { color: #b45309; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="panel"></div>
+{{ data|json_script:"trip-data" }}
+<script>
+const data = JSON.parse(document.getElementById('trip-data').textContent);
+
+// Station names come from a price list: always insert them as text, never as HTML.
+function text(tag, content, className) {
+  const element = document.createElement(tag);
+  element.textContent = content;
+  if (className) element.className = className;
+  return element;
+}
+function lines(parts) {
+  const box = document.createElement('div');
+  parts.forEach(([content, bold]) => box.appendChild(text(bold ? 'b' : 'div', content)));
+  return box;
+}
+
+const map = L.map('map');
+// Esri street basemap: needs no key.
+const tiles = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer';
+L.tileLayer(tiles + '/tile/{z}/{y}/{x}', {attribution: 'Tiles © Esri', maxZoom: 19}).addTo(map);
+
+const line = L.polyline(data.line, {color: '#2563eb', weight: 4}).addTo(map);
+map.fitBounds(line.getBounds(), {padding: [20, 20]});
+
+data.candidates.forEach(c => {
+  const popup = lines([[c.name, true], [`$${c.price.toFixed(3)} · mile ${c.mile} · ${c.precision}`]]);
+  L.circleMarker([c.lat, c.lng], {radius: 3, color: '#888', weight: 1}).bindPopup(popup).addTo(map);
+});
+
+data.stops.forEach(s => {
+  const popup = lines([
+    [`Stop ${s.sequence}: ${s.name}`, true],
+    [`${s.address}, ${s.city} ${s.state}`],
+    [`$${s.price_per_gallon.toFixed(3)}/gal · ${s.gallons.toFixed(1)} gal · $${s.cost_usd.toFixed(2)}`],
+    [`mile ${Math.round(s.mile_marker)} · ${s.off_route_miles} mi off route · ${s.location_precision}`],
+  ]);
+  L.marker([s.lat, s.lng]).bindPopup(popup).addTo(map);
+});
+
+const end = (place, colour, label) =>
+  L.circleMarker([place.lat, place.lng], {radius: 8, color: colour, fillOpacity: 1})
+    .bindPopup(lines([[label, true], [place.label]])).addTo(map);
+end(data.start, '#16a34a', 'Start');
+end(data.finish, '#dc2626', 'Finish');
+
+const panel = document.getElementById('panel');
+const s = data.summary;
+panel.appendChild(text('h1', `${s.distance_miles.toLocaleString()} mi · ${s.duration_hours} h`));
+panel.appendChild(text('div', `${s.number_of_stops} fuel stop(s) · ${s.gallons_purchased} gal bought`));
+panel.appendChild(text('div', `Total spent on fuel: $${s.total_fuel_cost_usd.toFixed(2)}`));
+panel.appendChild(text('div', `Fuel left on arrival: ${s.fuel_left_on_arrival_miles} mi`));
+data.warnings.forEach(w => panel.appendChild(text('div', w, 'warning')));
+</script>
+</body>
+</html>

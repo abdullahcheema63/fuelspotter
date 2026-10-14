@@ -30,7 +30,8 @@ class TripRecordAdmin(admin.ModelAdmin):
     search_fields = ('start_input', 'finish_input', 'start_label', 'finish_label')
     date_hierarchy = 'created_at'
     inlines = [TripStopInline]
-    readonly_fields = [field.name for field in TripRecord._meta.fields]
+    exclude = ('map_data',)          # large; it is what the map link shows
+    readonly_fields = [field.name for field in TripRecord._meta.fields if field.name != 'map_data']
 
     def has_add_permission(self, request):
         return False

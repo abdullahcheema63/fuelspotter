@@ -10,45 +10,41 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
-import os
 from pathlib import Path
 
+import environ
 from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-def env_bool(name, default):
-    return os.environ.get(name, str(default)).strip().lower() in ('1', 'true', 'yes', 'on')
+# Settings come from the environment. A .env file in the project root is read first (copy
+# .env.example); variables already set in the environment (e.g. by Docker) take precedence.
+env = environ.Env()
+environ.Env.read_env(BASE_DIR / '.env')
 
 
 def env_float(name, default, minimum, maximum):
     """A number from the environment, checked at startup so a typo can't change plans quietly."""
-    raw = os.environ.get(name, str(default))
     try:
-        value = float(raw)
+        value = env.float(name, default=default)
     except ValueError:
-        raise ImproperlyConfigured(f'{name} must be a number, got {raw!r}.')
+        raise ImproperlyConfigured(f'{name} must be a number, got {env.str(name)!r}.')
     if not minimum <= value <= maximum:
         raise ImproperlyConfigured(f'{name} must be between {minimum} and {maximum}, got {value}.')
     return value
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
+SECRET_KEY = env(
     'DJANGO_SECRET_KEY',
-    'django-insecure-h6^+um3&5&_p_a0sl=w1q1asz$)pixm2tz!%!uhi($heraszq3',
+    default='django-insecure-h6^+um3&5&_p_a0sl=w1q1asz$)pixm2tz!%!uhi($heraszq3',
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env_bool('DJANGO_DEBUG', True)
+DEBUG = env.bool('DJANGO_DEBUG', default=True)
 
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-    if host.strip()
-]
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
 
 
 # Application definition
@@ -100,26 +96,22 @@ WSGI_APPLICATION = 'spotter_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
+# DATABASE_URL, e.g. postgres://user:password@host:5432/name. Default: SQLite in the project folder.
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': env.db('DATABASE_URL', default=f'sqlite:///{BASE_DIR / "db.sqlite3"}'),
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Cache: geocoding and routing answers, so a repeated request makes no external calls.
-# In-process memory; lost on restart.
+# CACHE_URL, e.g. redis://host:6379/0. Default: in-process memory, lost on restart.
 
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'spotter-api',
-        'OPTIONS': {'MAX_ENTRIES': 500},
-    }
+    'default': env.cache('CACHE_URL', default='locmemcache://spotter-api'),
 }
+if CACHES['default']['BACKEND'].endswith('LocMemCache'):
+    CACHES['default'].setdefault('OPTIONS', {})['MAX_ENTRIES'] = 500
 
 
 # Password validation
@@ -172,10 +164,32 @@ MAILERS = {
 # Django REST framework: every API endpoint needs an API key (Authorization: Api-Key <key>).
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework_api_key.permissions.HasAPIKey'],
+    'DEFAULT_PERMISSION_CLASSES': ['api.permissions.HasValidAPIKey'],
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'UNAUTHENTICATED_USER': None,
+    'DEFAULT_RENDERER_CLASSES': ['rest_framework.renderers.JSONRenderer'],
+    'DEFAULT_PARSER_CLASSES': ['rest_framework.parsers.JSONParser'],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'EXCEPTION_HANDLER': 'api.exceptions.exception_handler',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Spotter fuel-route API',
+    'DESCRIPTION': 'Driving route between two places in the USA with cost-optimal fuel stops.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    'APPEND_COMPONENTS': {
+        'securitySchemes': {
+            'ApiKeyAuth': {
+                'type': 'apiKey',
+                'in': 'header',
+                'name': 'Authorization',
+                'description': 'Enter: Api-Key <your key>',
+            },
+        },
+    },
+    'SECURITY': [{'ApiKeyAuth': []}],
 }
 
 
@@ -192,15 +206,18 @@ START_FUEL_MILES = env_float('START_FUEL_MILES', 500, minimum=0, maximum=VEHICLE
 
 STATIONS_CSV = BASE_DIR / 'data' / 'stations_geocoded.csv'
 
+# How long the map link returned with a planned trip keeps working. 0 = it never expires.
+MAP_LINK_HOURS = env_float('MAP_LINK_HOURS', 24, minimum=0, maximum=24 * 365)
+
 
 # External services
 
-OSRM_URL = os.environ.get('OSRM_URL', 'https://router.project-osrm.org/route/v1/driving')
-NOMINATIM_URL = os.environ.get('NOMINATIM_URL', 'https://nominatim.openstreetmap.org/search')
+OSRM_URL = env('OSRM_URL', default='https://router.project-osrm.org/route/v1/driving')
+NOMINATIM_URL = env('NOMINATIM_URL', default='https://nominatim.openstreetmap.org/search')
 # Nominatim rejects generic agents; identify the application.
-NOMINATIM_USER_AGENT = os.environ.get(
+NOMINATIM_USER_AGENT = env(
     'NOMINATIM_USER_AGENT',
-    'spotter-fuel-route-assessment/0.1 (+https://abdullahcheema.dev)',
+    default='spotter-fuel-route-assessment/0.1 (+https://abdullahcheema.dev)',
 )
 OSRM_TIMEOUT_SECONDS = 30
 NOMINATIM_TIMEOUT_SECONDS = 10

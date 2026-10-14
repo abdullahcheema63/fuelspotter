@@ -117,8 +117,12 @@ Columns: `id` (OPIS truck-stop id), `name`, `address` (highway-style, e.g. `I-40
   `assumptions`, `fuel_stops[]` (sequence, station_id, name, address, city, state, lat, lng, price_per_gallon,
   mile_marker, gallons, cost_usd, location_precision, off_route_miles), `route` (GeoJSON FeatureCollection:
   simplified LineString + stop Points), `warnings[]`, `meta` (external_calls, timings_ms, cache hits).
-- `GET /api/v1/route/map/?start=...&finish=...` → HTML Leaflet map (route, all candidate stations as small dots,
-  stops as pins with popups). Basemap: Esri World_Street_Map tiles (no key; OSM tiles block file:// and need a referer).
+- The POST response starts with `map_url`: `GET /api/v1/route/map/<uuid>/` → HTML Leaflet map of that exact
+  trip (route, all candidate stations as small dots, stops as pins with popups, summary box). No API key: the
+  random id in the link is the permission. The page is drawn from `TripRecord.map_data` saved at planning time
+  (no re-plan, no external calls). Links expire after env `MAP_LINK_HOURS` (default 24; 0 = never) → 410;
+  unknown id → 404. There is NO map endpoint that takes start/finish or `?api_key=` (dropped 2026-10-14).
+  Basemap: Esri World_Street_Map tiles (no key; OSM tiles block file:// and need a referer).
 - OpenAPI schema + Swagger UI via drf-spectacular at `/api/schema/` and `/api/docs/`, with the API-key scheme documented.
 - Errors: 400 bad input; 422 location not found / outside USA / no road route / trip impossible with 500-mi range;
   502/504 when Nominatim/OSRM fail or time out. Always a JSON body with a clear `detail`.
@@ -126,7 +130,7 @@ Columns: `id` (OPIS truck-stop id), `name`, `address` (highway-style, e.g. `I-40
 ## Auth — API keys (`djangorestframework-api-key`, already installed)
 - `rest_framework_api_key` in INSTALLED_APPS; default permission `HasAPIKey` for the API.
 - Header: `Authorization: Api-Key <key>` (library default).
-- Map view (opened in a browser, can't send headers): also accept `?api_key=<key>` via a small custom permission.
+- Map view (opened in a browser, can't send headers): no key; reached only through the `map_url` of a planned trip.
 - Management command `create_api_key <name>` that prints a new key once. Keys manageable in Django admin.
 - `djangorestframework_simplejwt` is installed but **not used** — leave it out of settings and requirements.
 
@@ -138,12 +142,20 @@ Columns: `id` (OPIS truck-stop id), `name`, `address` (highway-style, e.g. `I-40
 - SQLite is fine. Stations are small (6.6k rows): load them once per process into numpy arrays (cache, refresh on `load_stations`).
 - Cache Nominatim results (normalised text) and OSRM results (rounded coords) with Django's cache → repeat requests make 0 external calls.
 - External calls: timeouts, a proper `User-Agent` (from settings/env; Nominatim returns 403 for generic agents), no retries storms.
+- Settings via django-environ (same convention as the owner's other projects): `.env` in the project root is read
+  if present (git-ignored; template `.env.example`), real environment variables win. `DATABASE_URL` (default SQLite)
+  and `CACHE_URL` (default LocMem) select the database and cache.
 - Settings from environment variables (`DJANGO_SECRET_KEY`, `DJANGO_DEBUG`, `NOMINATIM_USER_AGENT`, `OSRM_URL`, `NOMINATIM_URL`, `RESERVE_MILES`, `STOP_COST_USD`, `START_FUEL_MILES`) with dev defaults.
-- `requirements.txt` with only what's used (Django, djangorestframework, drf-spectacular, djangorestframework-api-key, numpy, requests).
+- `requirements.txt` with only what's used (Django, django-environ, djangorestframework, drf-spectacular, djangorestframework-api-key, numpy, requests).
 - `.gitignore`: `.venv/`, `db.sqlite3`, `.idea/`, `__pycache__/`, `.DS_Store`.
-- Tests never hit the network (mock Nominatim/OSRM). Must cover: planner known answer (stations at mi 100/300/450/700/900
+- (Only if tests are asked for) Tests never hit the network (mock Nominatim/OSRM). Should cover: planner known answer (stations at mi 100/300/450/700/900
   priced 3.50/3.00/3.60/3.20/3.40, 1000-mi trip, full tank, stop_cost 0 → buys 30 gal at mi 300 + 20 gal at mi 700 = $154),
   infeasible gap, stop-cost reduces stops, station filtering (wrong highway / too far / big-city town ignored),
   API auth (no key → 401/403), validation errors, response shape.
-- Small, focused commits with clear messages. Ask before adding new dependencies.
+- **Never commit, stage or push unless the owner explicitly asks in that moment**; when asked, show the files
+  and the message first and wait for a yes. Messages are one short line, owner as sole author, no co-author line.
+- **No test cases unless the owner explicitly asks** (decided 2026-10-14; this overrides the test list below).
+  Verify work by running it against `prototype/TESTED_ROUTES.md` with throwaway checks outside the repo.
+- Never write migration files by hand: change the model and run `makemigrations`.
+- Ask before adding new dependencies.
 - The owner wants the plan agreed before code is written — propose, wait for approval, then build step by step.
