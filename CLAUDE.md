@@ -156,6 +156,11 @@ Columns: `id` (OPIS truck-stop id), `name`, `address` (highway-style, e.g. `I-40
   and the message first and wait for a yes. Messages are one short line, owner as sole author, no co-author line.
 - **No test cases unless the owner explicitly asks** (decided 2026-10-14; this overrides the test list below).
   Verify work by running it against `prototype/TESTED_ROUTES.md` with throwaway checks outside the repo.
+- Docker (modelled on the owner's baiqa setup): `Dockerfile` (python:3.14-slim, gunicorn, whitenoise, non-root;
+  the container runs only the server), `docker-compose.yml` (web + Postgres 17 +
+  Redis 7, `.env` via env_file; inside Docker DATABASE_URL/CACHE_URL always point at those containers), `Makefile`
+  (`make help`; `setup/up/down/logs/migrate/load-stations/api-key` for Docker, `install/dev` without).
+  Migrations and station loading are explicit make targets, never run automatically on start.
 - Never write migration files by hand: change the model and run `makemigrations`.
 - Ask before adding new dependencies.
 - The owner wants the plan agreed before code is written — propose, wait for approval, then build step by step.
