@@ -18,19 +18,24 @@ spotter/
   stations_geocoded.csv               FINAL geocoded stations (input for this app) — copy into this repo
   GEOCODING.md                        how stations were geocoded — copy into this repo's docs/
   geocoding/                          offline pipeline scripts (1_..5_) that produced stations_geocoded.csv
-  prototype/plan_route_final.py       FINAL terminal prototype — the LOCKED algorithm (2026-10-14), numpy only
+  prototype/fuel_route.py             READABLE final prototype — port the services from THIS file
+  prototype/plan_route_final.py       the tested final prototype it was rewritten from (same behaviour)
   prototype/plan_route.py             first prototype (kept as the baseline to compare against)
   prototype/compare_strategies.py     first stop-cost search (5-mile units, slow) + strategy comparison
   downloads/                          big raw files (never commit)
   spotter_api/                        THIS Django project (git repo)
 ```
 `prototype/TESTED_ROUTES.md` lists every route and edge case tested with their results — test the API on the same.
-`prototype/plan_route_final.py` is the **reference implementation** — port its logic into the app (cleaned up,
-typed, tested). Do not import from it at runtime. Where this file and the two older prototypes disagree,
-`plan_route_final.py` wins.
+`prototype/fuel_route.py` is the **reference implementation** — port its logic into the app (typed, tested).
+Do not import from it at runtime. Where it and the older prototypes disagree, `fuel_route.py` wins.
 
-**Status:** algorithm locked; the API build has NOT started. Do not change anything in the Django project
-until the owner says go (they want to understand the algorithm fully first).
+**Status:** algorithm locked; API build started 2026-10-14 (owner said go). Build order: setup, models +
+`load_stations`, planner, routing, stations, geocoding, endpoint, API keys, map, schema, benchmark, README.
+Docs (README, cheat sheet) are written last.
+
+**History:** every planning request is saved as a `TripRecord` (inputs, resolved locations, outcome, totals,
+calls, timing) with its `TripStop` rows (station FK, price and amounts copied). Stations that leave the price
+list are marked `is_active=False`, never deleted, so history keeps pointing at them.
 
 ## Station data — `stations_geocoded.csv`
 One row per US station (6,626; Canadian rows and duplicate IDs already handled; duplicate prices averaged).
