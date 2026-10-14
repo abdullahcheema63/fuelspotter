@@ -56,8 +56,17 @@ make dev                        # http://127.0.0.1:8000
 
 ## Use it
 
-Send the key in the header `Authorization: Api-Key <key>`. Interactive docs, with an Authorize button
-for the key, are at http://localhost:8000/api/docs/ (OpenAPI schema at `/api/schema/`).
+Send the key in the header `Authorization: Api-Key <key>`.
+
+- **Interactive docs (Swagger UI):** http://localhost:8000/api/docs/, which is also where
+  http://localhost:8000/ takes you. Click **Authorize**, enter `Api-Key <key>`, and try requests from
+  the page.
+- **OpenAPI schema:** http://localhost:8000/api/schema/ (YAML; add `?format=json` for JSON). No key
+  needed to read it.
+- **Postman:** *Import* → paste `http://localhost:8000/api/schema/` → *Import*. Postman builds a
+  collection with the request, its example body and every documented response. Then, on the
+  collection's *Authorization* tab, choose *API Key* with key `Authorization`, value `Api-Key <key>`,
+  added to the *Header*.
 
 ### Request
 
